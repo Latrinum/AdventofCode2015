@@ -9,4 +9,17 @@ public class House {
 		this.x = x;
 		this.y = y;
 	}
+	
+    @Override
+    public boolean equals(Object object)
+    {
+        boolean sameSame = false;
+
+        if (object != null && object instanceof House)
+        {
+            sameSame = this.x == ((House) object).x && this.y == ((House) object).y;
+        }
+
+        return sameSame;
+    }
 }
