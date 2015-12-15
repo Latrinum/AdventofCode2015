@@ -5,13 +5,11 @@ totalCount = 0
 parsedInput = ''
 
 def isJson(myjson):
-    if isinstance(myjson, list) or isinstance(myjson, int):
-        return False
     if isinstance(myjson, dict) :
         return True
     try:
         json_object = json.loads(myjson)
-    except ValueError :
+    except (ValueError, KeyError, TypeError) :
         return False
     return True
 
