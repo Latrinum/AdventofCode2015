@@ -5,7 +5,6 @@ totalStore = 150
 
 containers = list()
 minNum = 1000
-containerTrack = list()
 
 def getPerms(sizeLeft, index, num, key) :
     perms = 0
